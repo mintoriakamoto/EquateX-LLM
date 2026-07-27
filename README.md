@@ -64,11 +64,11 @@ EquateX Studio (Beta) lets you run and train text, [audio](https://unsloth.ai/do
 * **Observability**: Monitor training live, track loss and GPU usage and customize graphs.
 * [Multi-GPU](https://unsloth.ai/docs/basics/multi-gpu-training-with-unsloth) training is supported, with major improvements coming soon.
 
-## 🚀 Unsloth Start
+## 🚀 EquateX Start
 
-[Unsloth Start](https://unsloth.ai/docs/integrations/unsloth-start) connects [Claude Code](https://unsloth.ai/docs/basics/claude-code), [Codex](https://unsloth.ai/docs/basics/codex) and other agents to local models with one command.
+[EquateX Start](https://unsloth.ai/docs/integrations/unsloth-start) connects [Claude Code](https://unsloth.ai/docs/basics/claude-code), [Codex](https://unsloth.ai/docs/basics/codex) and other agents to local models with one command.
 
-Start Unsloth, load a model, open your project folder, then run:
+Start EquateX Studio, load a model, open your project folder, then run:
 
 ```bash
 equatex start claude
@@ -85,7 +85,7 @@ Replace `claude` with any supported agent:
 | OpenCode | `equatex start opencode` |
 | Pi Coding Agent | `equatex start pi` |
 
-Claude Code, Codex, OpenCode and Pi can keep their current model and use Unsloth as a local
+Claude Code, Codex, OpenCode and Pi can keep their current model and use EquateX as a local
 subagent:
 
 ```bash
@@ -121,9 +121,9 @@ Use the same command to update.
 ```bash
 equatex studio -p 8888
 ```
-For LAN or cloud access, add `-H 0.0.0.0` (raw port only; add `--cloudflare` for a public URL). By default, Unsloth is accessible only locally.
+For LAN or cloud access, add `-H 0.0.0.0` (raw port only; add `--cloudflare` for a public URL). By default, EquateX Studio is accessible only locally.
 
-To reach Unsloth over HTTPS, use `equatex studio --secure`. Unsloth stays bound to localhost and is reached only through a free Cloudflare tunnel, which publishes it at a public `https://*.trycloudflare.com` URL (it fails closed if the tunnel can't start, so the raw port is never exposed). This makes Unsloth reachable from the internet, so anyone with the link and API key can use it and run code: keep your API key private (see Remote access below).
+To reach EquateX Studio over HTTPS, use `equatex studio --secure`. EquateX Studio stays bound to localhost and is reached only through a free Cloudflare tunnel, which publishes it at a public `https://*.trycloudflare.com` URL (it fails closed if the tunnel can't start, so the raw port is never exposed). This makes EquateX Studio reachable from the internet, so anyone with the link and API key can use it and run code: keep your API key private (see Remote access below).
 
 #### Docker
 Use our [Docker image](https://hub.docker.com/r/unsloth/unsloth) ```unsloth/unsloth``` container. Run:
@@ -252,7 +252,7 @@ equatex studio -p 8888
 #### Remote access: `--secure` (HTTPS tunnel) vs raw port
 By default `equatex studio` binds to `127.0.0.1` (this machine only). To reach it from another device, pick one of:
 
-- `--secure` (recommended): serve **only** through a free Cloudflare HTTPS link. Unsloth stays bound to localhost and the tunnel provides the public URL; it fails closed (does not start) if the tunnel can't come up, so the raw port is never exposed.
+- `--secure` (recommended): serve **only** through a free Cloudflare HTTPS link. EquateX Studio stays bound to localhost and the tunnel provides the public URL; it fails closed (does not start) if the tunnel can't come up, so the raw port is never exposed.
 ```bash
 equatex studio --secure -p 8888
 ```
@@ -262,7 +262,7 @@ equatex studio -H 0.0.0.0 -p 8888
 ```
 The Cloudflare tunnel is **off by default**: `-H 0.0.0.0` exposes the raw port only, not a public internet URL. Pair the wildcard bind with `--cloudflare` (`equatex studio -H 0.0.0.0 --cloudflare`) to also publish a public `https://*.trycloudflare.com` link, or prefer `--secure` (above), which keeps the raw port private. `--cloudflare` has no effect on a loopback bind.
 
-The first time Unsloth is published on a public URL (`--secure` or `--cloudflare`) with the auto-generated admin password still in place, it asks for a new admin password in the terminal (masked input with confirmation) before the public link goes up. Without an attached terminal it warns instead and keeps the bootstrap deadline: Unsloth shuts down after `UNSLOTH_STUDIO_BOOTSTRAP_TIMEOUT` (default 1 hour) unless the password is changed in the web UI.
+The first time EquateX Studio is published on a public URL (`--secure` or `--cloudflare`) with the auto-generated admin password still in place, it asks for a new admin password in the terminal (masked input with confirmation) before the public link goes up. Without an attached terminal it warns instead and keeps the bootstrap deadline: EquateX Studio shuts down after `UNSLOTH_STUDIO_BOOTSTRAP_TIMEOUT` (default 1 hour) unless the password is changed in the web UI.
 
 For headless setups that cannot answer that prompt, set the initial admin password non-interactively with `--password` (only takes effect when no password is set yet; if one already exists it is a hard error, so rotate later with `equatex studio reset-password`):
 
@@ -274,7 +274,7 @@ printf '%s\n' 'your-strong-password' | equatex studio --secure --password -   # 
 
 A literal `--password VALUE` is visible in the process list and shell history, so prefer the `UNSLOTH_STUDIO_PASSWORD` env var or `--password -` (stdin) for automation. This applies to any launch (public or a headless `-H 0.0.0.0` bind), and the password is set in the parent before the server binds, so it never reaches a re-executed child process.
 
-Server-side tools (web search, Python and terminal code execution) run as your user and are on by default. Anyone who can reach the server with the API key can run code on this machine, so keep your API key private and pass `--disable-tools` when exposing Unsloth.
+Server-side tools (web search, Python and terminal code execution) run as your user and are on by default. Anyone who can reach the server with the API key can run code on this machine, so keep your API key private and pass `--disable-tools` when exposing EquateX Studio.
 
 #### Advanced launch options
 Installer options can be passed as environment variables. On macOS, Linux and WSL place the variable after the pipe so the shell passes it to `sh`; on Windows set it with `$env:` before piping to `iex`.
@@ -287,7 +287,7 @@ curl -fsSL https://unsloth.ai/install.sh | UNSLOTH_NO_TORCH=1 sh
 $env:UNSLOTH_NO_TORCH=1; irm https://unsloth.ai/install.ps1 | iex
 ```
 
-Skip the post-install prompt that starts Unsloth (useful for automated installs):
+Skip the post-install prompt that starts EquateX Studio (useful for automated installs):
 ```bash
 curl -fsSL https://unsloth.ai/install.sh | UNSLOTH_SKIP_AUTOSTART=1 sh
 ```
@@ -323,9 +323,9 @@ UNSLOTH_NPM_REGISTRY=https://artifactory.example.com/api/npm/npm/ ./install.sh -
 ```powershell
 $env:UNSLOTH_NPM_REGISTRY='https://artifactory.example.com/api/npm/npm/'; .\install.ps1 --local
 ```
-It is threaded as `--registry` into the Unsloth frontend `npm`/`bun` installs; the supply-chain locks (7-day `min-release-age`, exact version pins) stay in force.
+It is threaded as `--registry` into the EquateX frontend `npm`/`bun` installs; the supply-chain locks (7-day `min-release-age`, exact version pins) stay in force.
 
-Cap Unsloth's native CPU thread pools on high-core hosts: `UNSLOTH_CPU_THREADS=8 equatex studio -p 8888`.
+Cap EquateX's native CPU thread pools on high-core hosts: `UNSLOTH_CPU_THREADS=8 equatex studio -p 8888`.
 
 #### Uninstall
 The recommended way to fully remove EquateX Studio is the matching uninstall script for your OS. It stops any running servers, removes the install dir, the launcher data dir, the desktop shortcut, and any platform-specific entries (macOS `.app` bundle + Launch Services on Mac; Start Menu, `HKCU\Software\Unsloth` registry key and user `PATH` entries on Windows):
