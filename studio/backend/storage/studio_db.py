@@ -720,6 +720,11 @@ def get_connection() -> sqlite3.Connection:
     conn.row_factory = sqlite3.Row
     # foreign_keys is session-scoped; set per connection
     conn.execute("PRAGMA foreign_keys=ON")
+    # Wait for a held write lock instead of erroring immediately. The training DB
+    # has genuinely concurrent writers (metric-flush thread, HTTP thread, stop
+    # watchdog) and WAL does not let two writers proceed at once; without this,
+    # busy_timeout defaults to 0 and a collision raises "database is locked".
+    conn.execute("PRAGMA busy_timeout=5000")
     if not _schema_ready:
         with _schema_lock:
             if not _schema_ready:
