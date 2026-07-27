@@ -444,11 +444,18 @@ async def start_training(
         from utils.transformers_version import SidecarSwapInProgress
 
         try:
-            success = backend.start_training(
-                job_id = job_id,
-                before_spawn = _free_vram_for_training,
-                resume_source_run_id = resume_run["id"] if resume_run else None,
-                **training_kwargs,
+            # Off the event loop: start_training spawns a fresh interpreter
+            # (spawn-mode Process.start), probes the GPU, and tears down the
+            # inference subprocess via before_spawn -- seconds of blocking work
+            # that would otherwise freeze every other request, including other
+            # clients' progress streams.
+            success = await asyncio.to_thread(
+                lambda: backend.start_training(
+                    job_id = job_id,
+                    before_spawn = _free_vram_for_training,
+                    resume_source_run_id = resume_run["id"] if resume_run else None,
+                    **training_kwargs,
+                )
             )
         except SidecarSwapInProgress as exc:
             # Expected loss of the race against a sidecar install: a retryable
@@ -511,7 +518,10 @@ async def stop_training(
                 status = "idle", message = "No training job is currently running"
             )
 
-        if not backend.stop_training(save = body.save):
+        # Off the event loop: stop_training has blocking time.sleep retry loops
+        # around DB finalization that would otherwise stall the loop under
+        # contention.
+        if not await asyncio.to_thread(backend.stop_training, save = body.save):
             return TrainingStopResponse(
                 status = "idle", message = "No training job is currently running"
             )
