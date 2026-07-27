@@ -77,6 +77,25 @@ function upsertPoint(
   step: number,
   value: number,
 ): TrainingSeriesPoint[] {
+  // Steps stream in monotonically, so the overwhelming common case is an
+  // append past the end. Handle it (and a same-step update of the tail)
+  // without the full findIndex scan and re-sort that made every progress
+  // event O(n) and each run O(n^2). The array stays sorted in every branch,
+  // so the output is identical to the old scan-then-sort path.
+  const n = points.length;
+  if (n === 0) {
+    return [{ step, value }];
+  }
+  const last = points[n - 1];
+  if (step > last.step) {
+    return [...points, { step, value }];
+  }
+  if (step === last.step) {
+    const next = points.slice();
+    next[n - 1] = { step, value };
+    return next;
+  }
+  // Out-of-order arrival (rare: e.g. a resume replaying earlier steps).
   const next = points.slice();
   const index = next.findIndex((point) => point.step === step);
   if (index >= 0) {
