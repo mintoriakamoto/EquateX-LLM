@@ -4637,6 +4637,15 @@ class LlamaCppBackend:
                 line = line.rstrip()
                 if line:
                     self._stdout_lines.append(line)
+                    # Cap the buffer: llama-server logs a timing line per request,
+                    # so on a long-lived keep-warm server this list would grow
+                    # without bound until the next model swap. Consumers slice the
+                    # tail ([-50:]) or scan startup lines that only exist right
+                    # after a load (before this cap can ever trigger), so trimming
+                    # old request-noise is safe. Kept a list -- callers slice it,
+                    # which deque(maxlen=) does not support.
+                    if len(self._stdout_lines) > 4000:
+                        del self._stdout_lines[:-2000]
                     logger.debug(f"[llama-server] {line}")
                     fh = getattr(self, "_llama_log_fh", None)
                     if fh is not None:
