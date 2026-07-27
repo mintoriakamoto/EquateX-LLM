@@ -60,6 +60,34 @@ _CANCEL_TIMEOUT_S = _env_int("UNSLOTH_STUDIO_TRAINING_CANCEL_TIMEOUT_S", 120)
 _DB_FINALIZE_RETRIES = 3
 _DB_FINALIZE_RETRY_S = 0.5
 
+# Upper bound on the in-memory metric histories the backend keeps for the live
+# chart and SSE-reconnect replay. These are display buffers only -- every step
+# is persisted to SQLite via _metric_buffer, and historical runs load from the
+# DB -- so bounding them never loses authoritative data. Left unbounded they
+# grew one entry per step for the whole run and were copied in full on every
+# /status poll (on the event loop). The frontend downsamples to a few hundred
+# render points regardless, so this cap is far above what is ever displayed.
+_MAX_METRIC_HISTORY_POINTS = 20_000
+
+
+def _decimate_aligned_histories(lists: list, max_points: int) -> None:
+    """Halve a group of index-aligned parallel lists in place, keeping every
+    other element, once the first exceeds ``max_points``.
+
+    Bounds memory while retaining the first and last points and the full step
+    range -- unlike a keep-last-N buffer, which would drop the early part of the
+    loss curve entirely. Because new points keep arriving between decimations,
+    density ends up recency-biased (older points get thinned more with each
+    halving), which suits a live chart where recent detail matters most. All
+    lists are sliced with the same indices, so callers' index alignment
+    (step[i] <-> loss[i]) is preserved.
+    """
+    if not lists or len(lists[0]) <= max_points:
+        return
+    keep = range(0, len(lists[0]), 2)
+    for lst in lists:
+        lst[:] = [lst[i] for i in keep]
+
 _pyplot = None
 _pyplot_failed = False
 
@@ -1883,6 +1911,23 @@ class TrainingBackend:
                         self.eval_enabled = True
                     else:
                         eval_loss = None
+
+                # Bound the in-memory display buffers so a long run cannot grow
+                # them without limit (each is also copied in full on every
+                # /status poll). Decimate each aligned group together so the
+                # parallel arrays stay index-aligned; the DB keeps every step.
+                _decimate_aligned_histories(
+                    [self.step_history, self.loss_history, self.lr_history],
+                    _MAX_METRIC_HISTORY_POINTS,
+                )
+                _decimate_aligned_histories(
+                    [self.grad_norm_step_history, self.grad_norm_history],
+                    _MAX_METRIC_HISTORY_POINTS,
+                )
+                _decimate_aligned_histories(
+                    [self.eval_step_history, self.eval_loss_history],
+                    _MAX_METRIC_HISTORY_POINTS,
+                )
 
                 # Buffer metric for DB flush.
                 self._metric_buffer.append(
