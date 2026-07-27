@@ -662,6 +662,21 @@ class ExportOrchestrator:
                     return op_success, op_message, op_output_path
                 except RuntimeError as exc:
                     op_success, op_message = False, str(exc)
+                    # A raised RuntimeError here is a timeout, crash, or
+                    # worker-level error -- never an ordinary export failure,
+                    # which the worker reports as a normal *_done with
+                    # success=False (see worker.py) and returns above without
+                    # raising. On timeout the worker is still grinding the
+                    # abandoned op: it holds the GPU and its late *_done response
+                    # would sit in the queue where the NEXT export (matched by
+                    # type, not op id) would consume it and return this op's
+                    # stale result. Tear the worker down so neither can happen,
+                    # and clear the loaded-checkpoint state since its memory is
+                    # gone -- mirroring load_checkpoint's timeout path.
+                    self._shutdown_subprocess(timeout = 5)
+                    self.current_checkpoint = None
+                    self.is_vision = False
+                    self.is_peft = False
                     return False, str(exc), None
             finally:
                 self._record_op_finished(op_success, op_message, op_output_path)
