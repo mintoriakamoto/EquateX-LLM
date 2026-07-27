@@ -266,6 +266,11 @@ export function useTrainingRuntimeLifecycle(): void {
     const metricsTimer = setInterval(() => {
       if (isIdle()) return;
       const s = runtimeStore.getState();
+      // While the SSE stream is live it already delivers every metric point
+      // incrementally, and /metrics ships the entire history each call, whose
+      // new array reference busts every downstream chart memo. Skip the poll
+      // while connected; keep it as the fallback when the stream is down.
+      if (s.sseConnected) return;
       if (shouldUseLiveSync(s) || s.currentStep > 0) {
         void pollMetrics();
       }
