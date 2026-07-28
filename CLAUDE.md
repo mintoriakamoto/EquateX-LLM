@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository overview
 
-**EquateX** is the product brand for this project: a fast LLM fine-tuning/RL library plus a local web UI (**EquateX Studio**). It is built on — and is a rebranded fork of — [Unsloth](https://github.com/unslothai/unsloth); the internal Python package, imports, and `unsloth_zoo` dependency keep the `unsloth` name (renaming them is load-bearing), so "unsloth" in code/paths is expected and correct. Upstream Unsloth copyright, `LICENSE`/`COPYING`/SPDX headers are retained per Apache-2.0/AGPL-3.0; EquateX changes are copyright the EquateX team.
+**EquateX** is the product brand for this project: a fast LLM fine-tuning/RL library plus a local web UI (**EquateX Studio**). It is built on — and is a rebranded fork of — [Unsloth](https://github.com/unslothai/unsloth); the internal Python package, imports, and `unsloth_zoo` dependency keep the `unsloth` name (renaming them is load-bearing), so "unsloth" in code/paths is expected and correct. EquateX is developed by Cook Labs Inc. Upstream Unsloth copyright, `LICENSE`/`COPYING`/SPDX headers are retained per Apache-2.0/AGPL-3.0 (see `NOTICE`); EquateX changes are © 2026 Cook Labs Inc.
 
 Three main pieces:
 

@@ -10,7 +10,7 @@ EquateX Studio lets you run and train models locally.
   <a href="https://unsloth.ai/docs">Documentation</a>
 </p>
 
-> **EquateX** is a rebranded fork of [Unsloth](https://github.com/unslothai/unsloth), built on its training engine and Triton kernels. Upstream Unsloth copyright and licenses (Apache-2.0 / AGPL-3.0) are retained in full; EquateX-specific changes are © the EquateX team.
+> **EquateX** is developed by **Cook Labs Inc.** It is a rebranded fork of [Unsloth](https://github.com/unslothai/unsloth), built on its training engine and Triton kernels. Upstream Unsloth copyright and licenses (Apache-2.0 / AGPL-3.0) are retained in full (see [`NOTICE`](NOTICE)); EquateX-specific changes are © 2026 Cook Labs Inc.
 
 <br>
 <a href="https://unsloth.ai/docs/new/studio">
