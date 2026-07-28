@@ -1034,6 +1034,17 @@ class ExportBackend:
 
                 ensure_dir(Path(abs_save_dir))
 
+                # Remove stale _tmp_model_* dirs from a previously cancelled or
+                # killed export to this directory: on a hard cancel the worker's
+                # own cleanup never runs, so these multi-GB scratch dirs would
+                # accumulate. Only this exact code-created prefix is swept, dirs
+                # only, and exports are serialized -- so a live temp dir is never
+                # removed. Runs before the pre_existing_subs snapshot below so a
+                # straggler is not mistaken for user content.
+                for _stale_tmp in Path(abs_save_dir).glob("_tmp_model_*"):
+                    if _stale_tmp.is_dir():
+                        shutil.rmtree(_stale_tmp, ignore_errors = True)
+
                 # On WSL, patch out sudo check before llama.cpp build
                 _apply_wsl_sudo_patch()
 
