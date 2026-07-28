@@ -10,6 +10,13 @@ EquateX Studio lets you run and train models locally.
   <a href="https://unsloth.ai/docs">Documentation</a>
 </p>
 
+<p align="center">
+  <a href="https://github.com/mintoriakamoto/EquateX-LLM/actions/workflows/lint-ci.yml"><img alt="Lint CI" src="https://github.com/mintoriakamoto/EquateX-LLM/actions/workflows/lint-ci.yml/badge.svg?branch=main"></a>
+  <a href="https://github.com/mintoriakamoto/EquateX-LLM/actions/workflows/studio-backend-ci.yml"><img alt="Backend CI" src="https://github.com/mintoriakamoto/EquateX-LLM/actions/workflows/studio-backend-ci.yml/badge.svg?branch=main"></a>
+  <a href="https://github.com/mintoriakamoto/EquateX-LLM/actions/workflows/studio-frontend-ci.yml"><img alt="Frontend CI" src="https://github.com/mintoriakamoto/EquateX-LLM/actions/workflows/studio-frontend-ci.yml/badge.svg?branch=main"></a>
+  <a href="https://github.com/mintoriakamoto/EquateX-LLM/actions/workflows/consolidated-tests-ci.yml"><img alt="Core" src="https://github.com/mintoriakamoto/EquateX-LLM/actions/workflows/consolidated-tests-ci.yml/badge.svg?branch=main"></a>
+</p>
+
 > **EquateX** is developed by **Cook Labs Inc.** It is a rebranded fork of [Unsloth](https://github.com/unslothai/unsloth), built on its training engine and Triton kernels. Upstream Unsloth copyright and licenses (Apache-2.0 / AGPL-3.0) are retained in full (see [`NOTICE`](NOTICE)); EquateX-specific changes are © 2026 Cook Labs Inc.
 
 <br>
