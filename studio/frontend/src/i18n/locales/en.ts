@@ -20,12 +20,12 @@ export const en = {
   },
   shell: {
     beta: "BETA",
-    brand: "unsloth",
-    product: "Unsloth Studio",
+    brand: "equatex",
+    product: "EquateX Studio",
     accountMenu: "{name} account menu",
     updateAvailable: "Update available",
     aria: {
-      home: "Unsloth home",
+      home: "EquateX home",
       closeSidebar: "Close sidebar",
       openSidebar: "Open sidebar",
       chatOptions: "Chat options",
@@ -86,7 +86,7 @@ export const en = {
     title: "Settings",
     dialog: {
       title: "Settings",
-      description: "Manage your Unsloth preferences.",
+      description: "Manage your EquateX preferences.",
       closeAriaLabel: "Close settings",
       searchPlaceholder: "Search settings…",
       searchNoResults: "No settings found.",
@@ -131,7 +131,7 @@ export const en = {
         sttReady: "Loaded on {device}",
         sttLoaded: "Loaded",
         sttUnavailable:
-          "Not installed on this server. Run `unsloth studio update` to enable local dictation.",
+          "Not installed on this server. Run `equatex studio update` to enable local dictation.",
         sttRetry: "Retry",
         sttDownloadChecking: "Checking download status…",
         sttNotDownloaded: "Not downloaded",
@@ -152,7 +152,7 @@ export const en = {
         microphoneGrantDescription: "Allow mic access to show device names",
         allowMicrophone: "Allow microphone",
         micAccessBlocked:
-          "Microphone access was blocked. Allow microphone access for this Unsloth page, then try again.",
+          "Microphone access was blocked. Allow microphone access for this EquateX page, then try again.",
         micAccessUnsupported:
           "Microphone access is not supported in this browser or context.",
         systemDefault: "System default",
@@ -236,7 +236,7 @@ export const en = {
     },
     general: {
       title: "General",
-      description: "Global preferences for Unsloth.",
+      description: "Global preferences for EquateX.",
       account: "Account",
       huggingFaceToken: "Hugging Face token",
       huggingFaceTokenDescription:
@@ -245,7 +245,7 @@ export const en = {
       showToken: "Show token",
       tokenValidated: "Token validated",
       password: "Password",
-      passwordDescription: "Change the password for this Unsloth account.",
+      passwordDescription: "Change the password for this EquateX account.",
       passwordDialog: {
         trigger: "Change password",
         title: "Change password",
@@ -322,7 +322,7 @@ export const en = {
         sectionTitle: "Permissions",
         bypassLabel: "Tool permissions",
         bypassDescription:
-          "How Unsloth approves chat tool calls (terminal, python, web, MCP) before they run. Full access disables approvals and the code sandbox.",
+          "How EquateX approves chat tool calls (terminal, python, web, MCP) before they run. Full access disables approvals and the code sandbox.",
       },
       notifications: {
         sectionTitle: "Notifications",
@@ -372,16 +372,16 @@ export const en = {
         action: "Reset preferences",
         confirmTitle: "Reset all local preferences?",
         confirmDescription:
-          "Clears local-only preferences and reloads Unsloth. Chats, API access, and DB-backed settings are kept.",
+          "Clears local-only preferences and reloads EquateX. Chats, API access, and DB-backed settings are kept.",
         confirmAction: "Reset and reload",
       },
     },
     profile: {
       title: "Profile",
-      description: "How your profile appears in Unsloth.",
+      description: "How your profile appears in EquateX.",
       changePicture: "Change profile picture",
       displayName: "Display name",
-      nickname: "What should Unsloth call you?",
+      nickname: "What should EquateX call you?",
       nicknamePlaceholder: "Nickname",
       nicknameSaved: "Preferred name saved",
       avatarShape: "Profile picture shape",
@@ -405,7 +405,7 @@ export const en = {
     },
     appearance: {
       title: "Appearance",
-      description: "How Unsloth Studio looks on this device.",
+      description: "How EquateX Studio looks on this device.",
       theme: {
         title: "Theme",
         label: "Color scheme",
@@ -416,7 +416,7 @@ export const en = {
       },
       palette: {
         label: "Color palette",
-        description: "Colors used across Unsloth, in light and dark mode.",
+        description: "Colors used across EquateX, in light and dark mode.",
         standard: "Standard",
         classic: "Classic",
         minimal: "Minimal",
@@ -474,7 +474,7 @@ export const en = {
         },
         uiFontSize: {
           label: "UI font size",
-          description: "Adjust the base size used for the Unsloth UI.",
+          description: "Adjust the base size used for the EquateX UI.",
         },
         codeFontSize: {
           label: "Code font size",
@@ -504,7 +504,7 @@ export const en = {
       language: {
         title: "Language",
         label: "Display language",
-        description: "The language used by Unsloth.",
+        description: "The language used by EquateX.",
         autoDetect: "Auto detect",
       },
       layout: {
@@ -523,7 +523,7 @@ export const en = {
     },
     resources: {
       title: "System",
-      description: "Monitor this Unsloth server's hardware and storage.",
+      description: "Monitor this EquateX server's hardware and storage.",
       liveUpdates: "Live updates",
       floatingWindow: "Floating window",
       disableOverlay: "Disable overlay",
@@ -586,9 +586,9 @@ export const en = {
     agents: {
       title: "Agents",
       description:
-        "Connect coding agents like Claude Code and Codex to a model running locally in Unsloth with unsloth start.",
+        "Connect coding agents like Claude Code and Codex to a model running locally in EquateX with equatex start.",
       intro:
-        "connects Claude Code, Codex, Hermes, OpenClaw, OpenCode, Pi and other agents to a model served locally by Unsloth, fully offline on your own hardware. It runs an OpenAI-compatible server for the agent and never touches your agent's config files.",
+        "connects Claude Code, Codex, Hermes, OpenClaw, OpenCode, Pi and other agents to a model served locally by EquateX, fully offline on your own hardware. It runs an OpenAI-compatible server for the agent and never touches your agent's config files.",
       readDocs: "Read the docs",
       copy: "Copy",
       copied: "Copied",
@@ -611,11 +611,11 @@ export const en = {
       agentDocs: "Open {agent} setup docs",
       copyGeneratedCommand: "Copy generated command",
       modelNote:
-        "Codex requires a GGUF model served by llama-server. Other agents can also use transformer-backed models; remove --model to use the model already loaded in Unsloth Studio.",
+        "Codex requires a GGUF model served by llama-server. Other agents can also use transformer-backed models; remove --model to use the model already loaded in EquateX Studio.",
       subagent: {
         title: "Use a local model as a subagent",
         description:
-          "Keep {agent} on its current model and delegate selected tasks to this local Unsloth model.",
+          "Keep {agent} on its current model and delegate selected tasks to this local EquateX model.",
         setupCommand: "Setup command",
         copySetupCommand: "Copy subagent setup command",
         usagePrompt: "Then in {agent}, type:",
@@ -645,9 +645,9 @@ export const en = {
       options: {
         title: "Common options",
         description:
-          "Unsloth flags are parsed first; anything it doesn't recognize is passed straight through to the agent.",
+          "EquateX flags are parsed first; anything it doesn't recognize is passed straight through to the agent.",
         model:
-          "Select a model. Without --model, unsloth start uses the model currently loaded in Studio and errors if none is loaded.",
+          "Select a model. Without --model, equatex start uses the model currently loaded in Studio and errors if none is loaded.",
         contextLength:
           "Set the requested context length (alias: --max-seq-length).",
         ggufVariant: "Choose the GGUF quantization variant.",
@@ -655,21 +655,21 @@ export const en = {
         tensorParallel: "Toggle tensor-parallel across multiple GPUs.",
         serve: "Enable or disable the automatic local server.",
         launch: "Launch the agent, or just print the command and environment.",
-        persist: "Keep Unsloth-managed agent storage between runs.",
+        persist: "Keep EquateX-managed agent storage between runs.",
         asSubagent:
-          "Keep the parent on its current model and register Unsloth as a local subagent (Claude Code, Codex, OpenCode, and Pi).",
-        apiKey: "Provide your Unsloth API key (or set UNSLOTH_API_KEY).",
+          "Keep the parent on its current model and register EquateX as a local subagent (Claude Code, Codex, OpenCode, and Pi).",
+        apiKey: "Provide your EquateX API key (or set UNSLOTH_API_KEY).",
         yolo: "Skip approval prompts. Use only in trusted environments.",
       },
       remote: {
         title: "Connect to a remote Studio",
         description:
-          "Point unsloth start at a Studio running elsewhere by setting these before launching (or pass --api-key directly):",
+          "Point equatex start at a Studio running elsewhere by setting these before launching (or pass --api-key directly):",
       },
       passthrough: {
         title: "Passing agent arguments",
         description:
-          "Arguments after the Unsloth flags are forwarded to the agent itself, so native commands like resume still work:",
+          "Arguments after the EquateX flags are forwarded to the agent itself, so native commands like resume still work:",
       },
       dryRun: {
         title: "Preview without launching",
@@ -801,7 +801,7 @@ export const en = {
     },
     apiKeys: {
       title: "API",
-      description: "Access Unsloth via the OpenAI-compatible API.",
+      description: "Access EquateX via the OpenAI-compatible API.",
       readDocs: "Read the API docs",
       noAccess: "No API access yet.",
       accessTokens: "Access tokens",
@@ -829,7 +829,7 @@ export const en = {
       osWindows: "Windows",
       secureHttps: "Secure HTTPS",
       secureHttpsHint:
-        "The 0.0.0.0 port is still reachable globally. For full security, launch Unsloth Studio with --secure to expose only this HTTPS link.",
+        "The 0.0.0.0 port is still reachable globally. For full security, launch EquateX Studio with --secure to expose only this HTTPS link.",
       copyTunnelUrl: "Copy tunnel URL",
       copySnippet: "Copy snippet",
       copy: "Copy",
@@ -866,7 +866,7 @@ export const en = {
     about: {
       title: "About",
       description: "Docs, release notes, feedback, and build info.",
-      studioVersion: "Unsloth Version",
+      studioVersion: "EquateX Version",
       packageVersion: "Package Version",
       llamaCppVersion: "llama.cpp Version",
       hardware: "Hardware",
@@ -882,7 +882,7 @@ export const en = {
       reportIssue: "Report an issue",
       license: {
         sectionTitle: "License",
-        studioLabel: "Unsloth Studio",
+        studioLabel: "EquateX Studio",
         studioLicense: "AGPL-3.0",
         studioDescription: "Open source under the GNU AGPL v3.0.",
         libraryLabel: "Unsloth Core",
@@ -890,19 +890,19 @@ export const en = {
         libraryDescription: "Licensed under Apache 2.0.",
       },
       dangerZone: "Danger zone",
-      shutDownStudio: "Shut down Unsloth Studio",
+      shutDownStudio: "Shut down EquateX Studio",
       shutDownStudioDescription:
-        "Stops the Unsloth server and ends your session.",
+        "Stops the EquateX server and ends your session.",
       shutDown: "Shut down",
       update: {
-        title: "Update Unsloth Studio",
+        title: "Update EquateX Studio",
         commandText: "{label} text",
         copied: "Copied",
         copyCommand: "Copy command",
         commandCopied: "{label} copied",
         copyNamedCommand: "Copy {label}",
-        checkingInstall: "Checking how Unsloth was installed...",
-        installIntro: "To install or update Unsloth:",
+        checkingInstall: "Checking how EquateX was installed...",
+        installIntro: "To install or update EquateX:",
         localUpdateHeading: "Local update",
         installCommandUnix: "macOS/Linux install command",
         installCommandWindows: "Windows install command",
@@ -916,11 +916,11 @@ export const en = {
           "Source or VCS package install detected. Reinstall from the original local path or Git URL.",
         repoCheckoutFallback:
           "If you still have the repo checkout, run the local installer from it:",
-        restartAfterUpdate: "Restart Unsloth after updating.",
+        restartAfterUpdate: "Restart EquateX after updating.",
         desktopManaged:
           "The desktop app keeps its bundled backend updated and will prompt when a new version is available.",
         unknownInstall:
-          "Could not detect how Unsloth was installed. For installer or PyPI installs, use the commands above.",
+          "Could not detect how EquateX was installed. For installer or PyPI installs, use the commands above.",
         localCheckout:
           "For local checkout installs, run the local installer from that checkout:",
         docs: "Install docs:",
@@ -1378,7 +1378,7 @@ export const en = {
       preparing: "Preparing",
       left: "{eta} left",
       downloaded: "{size} downloaded",
-      terminalStart: "> unsloth training starts...",
+      terminalStart: "> equatex training starts...",
       preparingResources: "> Preparing model and dataset...",
       gettingReady: "> We are getting everything ready for your run...",
       waitingForFirstStep: "> {message} | waiting for first step... ({step})",
