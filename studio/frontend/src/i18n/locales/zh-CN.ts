@@ -23,12 +23,12 @@ export const zhCN = {
   },
   shell: {
     beta: "BETA",
-    brand: "unsloth",
-    product: "Unsloth Studio",
+    brand: "equatex",
+    product: "EquateX Studio",
     accountMenu: "{name} 账号菜单",
     updateAvailable: "有可用更新",
     aria: {
-      home: "Unsloth 首页",
+      home: "EquateX 首页",
       closeSidebar: "关闭侧边栏",
       openSidebar: "打开侧边栏",
       chatOptions: "聊天选项",
@@ -89,7 +89,7 @@ export const zhCN = {
     title: "设置",
     dialog: {
       title: "设置",
-      description: "管理你的 Unsloth Studio 偏好设置。",
+      description: "管理你的 EquateX Studio 偏好设置。",
       closeAriaLabel: "关闭设置",
       searchPlaceholder: "搜索设置…",
       searchNoResults: "未找到设置。",
@@ -107,7 +107,7 @@ export const zhCN = {
     },
     general: {
       title: "通用",
-      description: "Unsloth Studio 的全局偏好设置。",
+      description: "EquateX Studio 的全局偏好设置。",
       account: "账号",
       huggingFaceToken: "Hugging Face token",
       huggingFaceTokenDescription: "用于加载受限模型和推送产物。",
@@ -115,7 +115,7 @@ export const zhCN = {
       showToken: "显示 token",
       tokenValidated: "Token 已验证",
       password: "密码",
-      passwordDescription: "更改此 Unsloth 账号的密码。",
+      passwordDescription: "更改此 EquateX 账号的密码。",
       passwordDialog: {
         trigger: "更改密码",
         title: "更改密码",
@@ -228,16 +228,16 @@ export const zhCN = {
         action: "重置偏好设置",
         confirmTitle: "重置所有本地偏好设置？",
         confirmDescription:
-          "这会清除仅保存在本地的偏好设置，然后重新加载 Unsloth。聊天、API 访问权限和数据库中的设置不会受到影响。",
+          "这会清除仅保存在本地的偏好设置，然后重新加载 EquateX。聊天、API 访问权限和数据库中的设置不会受到影响。",
         confirmAction: "重置并重新加载",
       },
     },
     profile: {
       title: "个人资料",
-      description: "你的个人资料在 Unsloth 中的显示方式。",
+      description: "你的个人资料在 EquateX 中的显示方式。",
       changePicture: "更换头像",
       displayName: "显示名称",
-      nickname: "Unsloth 应该怎么称呼你？",
+      nickname: "EquateX 应该怎么称呼你？",
       nicknamePlaceholder: "昵称",
       nicknameSaved: "称呼名称已保存",
       avatarShape: "头像形状",
@@ -261,11 +261,11 @@ export const zhCN = {
     },
     appearance: {
       title: "外观",
-      description: "调整 Unsloth Studio 在此设备上的显示方式。",
+      description: "调整 EquateX Studio 在此设备上的显示方式。",
       language: {
         title: "语言",
         label: "显示语言",
-        description: "选择 Unsloth 使用的语言。",
+        description: "选择 EquateX 使用的语言。",
         autoDetect: "自动检测",
       },
       theme: {
@@ -278,7 +278,7 @@ export const zhCN = {
       },
       palette: {
         label: "调色板",
-        description: "Unsloth 全局使用的配色，支持浅色和深色模式。",
+        description: "EquateX 全局使用的配色，支持浅色和深色模式。",
         standard: "标准",
         classic: "经典",
         minimal: "极简",
@@ -334,7 +334,7 @@ export const zhCN = {
         },
         uiFontSize: {
           label: "界面字号",
-          description: "调整 Unsloth 界面的基准字号。",
+          description: "调整 EquateX 界面的基准字号。",
         },
         codeFontSize: {
           label: "代码字号",
@@ -375,7 +375,7 @@ export const zhCN = {
     },
     resources: {
       title: "系统",
-      description: "监控此 Unsloth 服务器的硬件和存储。",
+      description: "监控此 EquateX 服务器的硬件和存储。",
       liveUpdates: "实时更新",
       floatingWindow: "悬浮窗口",
       disableOverlay: "禁用悬浮层",
@@ -500,7 +500,7 @@ export const zhCN = {
     },
     apiKeys: {
       title: "API",
-      description: "通过兼容 OpenAI 的 API 以编程方式访问 Unsloth。",
+      description: "通过兼容 OpenAI 的 API 以编程方式访问 EquateX。",
       readDocs: "阅读 API 文档",
       noAccess: "还没有 API 访问权限。",
       accessTokens: "访问 token",
@@ -528,7 +528,7 @@ export const zhCN = {
       osWindows: "Windows",
       secureHttps: "安全 HTTPS",
       secureHttpsHint:
-        "0.0.0.0 端口仍可被全网访问。如需完全安全，请使用 --secure 启动 Unsloth Studio，仅暴露此 HTTPS 链接。",
+        "0.0.0.0 端口仍可被全网访问。如需完全安全，请使用 --secure 启动 EquateX Studio，仅暴露此 HTTPS 链接。",
       copyTunnelUrl: "复制隧道链接",
       copySnippet: "复制代码片段",
       copy: "复制",
@@ -563,8 +563,8 @@ export const zhCN = {
     },
     about: {
       title: "关于",
-      description: "文档、发布说明、反馈和 Unsloth 构建信息。",
-      studioVersion: "Unsloth 版本",
+      description: "文档、发布说明、反馈和 EquateX 构建信息。",
+      studioVersion: "EquateX 版本",
       packageVersion: "包版本",
       llamaCppVersion: "llama.cpp 版本",
       hardware: "硬件",
@@ -580,7 +580,7 @@ export const zhCN = {
       reportIssue: "报告问题",
       license: {
         sectionTitle: "许可证",
-        studioLabel: "Unsloth Studio",
+        studioLabel: "EquateX Studio",
         studioLicense: "AGPL-3.0",
         studioDescription: "基于 GNU AGPL v3.0 开源。",
         libraryLabel: "Unsloth Core",
@@ -588,18 +588,18 @@ export const zhCN = {
         libraryDescription: "基于 Apache License 2.0 许可。",
       },
       dangerZone: "危险区域",
-      shutDownStudio: "关闭 Unsloth Studio",
-      shutDownStudioDescription: "停止 Unsloth 服务进程并结束你的会话。",
+      shutDownStudio: "关闭 EquateX Studio",
+      shutDownStudioDescription: "停止 EquateX 服务进程并结束你的会话。",
       shutDown: "关闭",
       update: {
-        title: "更新 Unsloth Studio",
+        title: "更新 EquateX Studio",
         commandText: "{label} 文本",
         copied: "已复制",
         copyCommand: "复制命令",
         commandCopied: "{label} 已复制",
         copyNamedCommand: "复制 {label}",
-        checkingInstall: "正在检查 Unsloth 的安装方式...",
-        installIntro: "安装或更新 Unsloth：",
+        checkingInstall: "正在检查 EquateX 的安装方式...",
+        installIntro: "安装或更新 EquateX：",
         localUpdateHeading: "本地更新",
         installCommandUnix: "macOS/Linux 安装命令",
         installCommandWindows: "Windows 安装命令",
@@ -611,12 +611,12 @@ export const zhCN = {
         sourceInstallDetected:
           "这看起来是源码或 VCS 包安装。请从最初使用的本地路径或 Git URL 重新安装。",
         repoCheckoutFallback:
-          "如果你仍保留 Unsloth 仓库 checkout，请从该 checkout 运行本地安装器：",
-        restartAfterUpdate: "更新后请重启 Unsloth。",
+          "如果你仍保留 EquateX 仓库 checkout，请从该 checkout 运行本地安装器：",
+        restartAfterUpdate: "更新后请重启 EquateX。",
         desktopManaged:
           "桌面应用会自动更新其内置后端，有新版本时会提示。",
         unknownInstall:
-          "Unsloth 无法检测安装方式。如果你使用一键安装器或 PyPI 安装，请使用上面的命令。",
+          "EquateX 无法检测安装方式。如果你使用一键安装器或 PyPI 安装，请使用上面的命令。",
         localCheckout:
           "对于本地 checkout 安装，请改为从该 checkout 运行本地安装器：",
         docs: "安装文档：",
@@ -1052,7 +1052,7 @@ export const zhCN = {
       preparing: "准备中",
       left: "剩余 {eta}",
       downloaded: "已下载 {size}",
-      terminalStart: "> Unsloth 训练开始...",
+      terminalStart: "> EquateX 训练开始...",
       preparingResources: "> 正在准备模型和数据集...",
       gettingReady: "> 正在为本次运行做好准备...",
       waitingForFirstStep: "> {message} | 等待第一步...（{step}）",

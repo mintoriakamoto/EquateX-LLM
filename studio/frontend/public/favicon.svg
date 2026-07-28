@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="EquateX">
+  <!-- Placeholder EquateX / Cook Labs Inc. mark. Replace with the real brand asset. -->
+  <rect width="64" height="64" rx="14" fill="#4f46e5"/>
+  <text x="32" y="43" text-anchor="middle" fill="#ffffff"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
+        font-size="30" font-weight="700" letter-spacing="-1">EX</text>
+</svg>

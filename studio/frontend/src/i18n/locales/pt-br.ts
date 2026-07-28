@@ -23,12 +23,12 @@ export const ptBR = {
   },
   shell: {
     beta: "BETA",
-    brand: "unsloth",
-    product: "Unsloth Studio",
+    brand: "equatex",
+    product: "EquateX Studio",
     accountMenu: "Menu de conta {name}",
     updateAvailable: "Atualização disponível",
     aria: {
-      home: "Início do Unsloth",
+      home: "Início do EquateX",
       closeSidebar: "Fechar barra lateral",
       openSidebar: "Abrir barra lateral",
       chatOptions: "Opções de chat",
@@ -89,7 +89,7 @@ export const ptBR = {
     title: "Configurações",
     dialog: {
       title: "Configurações",
-      description: "Gerencie suas preferências do Unsloth.",
+      description: "Gerencie suas preferências do EquateX.",
       closeAriaLabel: "Fechar configurações",
       searchPlaceholder: "Pesquisar configurações…",
       searchNoResults: "Nenhuma configuração encontrada.",
@@ -107,7 +107,7 @@ export const ptBR = {
     },
     general: {
       title: "Geral",
-      description: "Preferências globais do Unsloth.",
+      description: "Preferências globais do EquateX.",
       account: "Conta",
       huggingFaceToken: "Token do Hugging Face",
       huggingFaceTokenDescription:
@@ -116,7 +116,7 @@ export const ptBR = {
       hideToken: "Ocultar token",
       showToken: "Mostrar token",
       password: "Senha",
-      passwordDescription: "Altere a senha desta conta do Unsloth.",
+      passwordDescription: "Altere a senha desta conta do EquateX.",
       passwordDialog: {
         trigger: "Alterar senha",
         title: "Alterar senha",
@@ -235,16 +235,16 @@ export const ptBR = {
         action: "Redefinir preferências",
         confirmTitle: "Redefinir todas as preferências locais?",
         confirmDescription:
-          "Limpa as preferências locais e recarrega o Unsloth. Chats, acesso à API e configurações salvas no banco de dados são mantidos.",
+          "Limpa as preferências locais e recarrega o EquateX. Chats, acesso à API e configurações salvas no banco de dados são mantidos.",
         confirmAction: "Redefinir e recarregar",
       },
     },
     profile: {
       title: "Perfil",
-      description: "Como seu perfil aparece no Unsloth.",
+      description: "Como seu perfil aparece no EquateX.",
       changePicture: "Alterar foto de perfil",
       displayName: "Nome de exibição",
-      nickname: "Como o Unsloth deve chamar você?",
+      nickname: "Como o EquateX deve chamar você?",
       nicknamePlaceholder: "Apelido",
       nicknameSaved: "Nome preferido salvo",
       avatarShape: "Formato da foto de perfil",
@@ -268,7 +268,7 @@ export const ptBR = {
     },
     appearance: {
       title: "Aparência",
-      description: "Como o Unsloth Studio se parece neste dispositivo.",
+      description: "Como o EquateX Studio se parece neste dispositivo.",
       theme: {
         title: "Tema",
         label: "Esquema de cores",
@@ -279,7 +279,7 @@ export const ptBR = {
       },
       palette: {
         label: "Paleta de cores",
-        description: "Cores usadas no Unsloth, nos modos claro e escuro.",
+        description: "Cores usadas no EquateX, nos modos claro e escuro.",
         standard: "Padrão",
         classic: "Clássico",
         minimal: "Minimalista",
@@ -335,7 +335,7 @@ export const ptBR = {
         },
         uiFontSize: {
           label: "Tamanho da fonte da interface",
-          description: "Ajuste o tamanho base da interface do Unsloth.",
+          description: "Ajuste o tamanho base da interface do EquateX.",
         },
         codeFontSize: {
           label: "Tamanho da fonte de código",
@@ -365,7 +365,7 @@ export const ptBR = {
       language: {
         title: "Idioma",
         label: "Idioma de exibição",
-        description: "O idioma utilizado pelo Unsloth.",
+        description: "O idioma utilizado pelo EquateX.",
         autoDetect: "Detecção automática",
       },
       layout: {
@@ -384,7 +384,7 @@ export const ptBR = {
     },
     resources: {
       title: "Sistema",
-      description: "Monitore o hardware e o armazenamento deste servidor Unsloth.",
+      description: "Monitore o hardware e o armazenamento deste servidor EquateX.",
       liveUpdates: "Atualizações ao vivo",
       floatingWindow: "Janela flutuante",
       disableOverlay: "Desativar sobreposição",
@@ -513,7 +513,7 @@ export const ptBR = {
     apiKeys: {
       title: "API",
       description:
-        "Acesse o Unsloth por meio da API compatível com OpenAI.",
+        "Acesse o EquateX por meio da API compatível com OpenAI.",
       readDocs: "Leia a documentação da API",
       noAccess: "Nenhum acesso à API ainda.",
       accessTokens: "Tokens de acesso",
@@ -541,7 +541,7 @@ export const ptBR = {
       osWindows: "Windows",
       secureHttps: "HTTPS Seguro",
       secureHttpsHint:
-        "A porta 0.0.0.0 ainda está acessível globalmente. Para segurança total, inicie o Unsloth Studio com --secure para expor apenas este link HTTPS.",
+        "A porta 0.0.0.0 ainda está acessível globalmente. Para segurança total, inicie o EquateX Studio com --secure para expor apenas este link HTTPS.",
       copyTunnelUrl: "Copiar URL do túnel",
       copySnippet: "Copiar trecho de código",
       copy: "Copiar",
@@ -578,7 +578,7 @@ export const ptBR = {
       title: "Sobre",
       description:
         "Documentação, notas de lançamento, feedback e informações da build.",
-      studioVersion: "Versão do Unsloth",
+      studioVersion: "Versão do EquateX",
       packageVersion: "Versão do Pacote",
       llamaCppVersion: "Versão do llama.cpp",
       hardware: "Hardware",
@@ -594,7 +594,7 @@ export const ptBR = {
       reportIssue: "Reportar um problema",
       license: {
         sectionTitle: "Licença",
-        studioLabel: "Unsloth Studio",
+        studioLabel: "EquateX Studio",
         studioLicense: "AGPL-3.0",
         studioDescription:
           "Código aberto sob a licença GNU AGPL v3.0.",
@@ -603,19 +603,19 @@ export const ptBR = {
         libraryDescription: "Licenciado sob Apache 2.0.",
       },
       dangerZone: "Zona de perigo",
-      shutDownStudio: "Desligar Unsloth Studio",
+      shutDownStudio: "Desligar EquateX Studio",
       shutDownStudioDescription:
-        "Interrompe o servidor Unsloth e encerra sua sessão.",
+        "Interrompe o servidor EquateX e encerra sua sessão.",
       shutDown: "Desligar",
       update: {
-        title: "Atualizar Unsloth Studio",
+        title: "Atualizar EquateX Studio",
         commandText: "Texto de {label}",
         copied: "Copiado",
         copyCommand: "Copiar comando",
         commandCopied: "{label} copiado",
         copyNamedCommand: "Copiar {label}",
-        checkingInstall: "Verificando como o Unsloth foi instalado...",
-        installIntro: "Para instalar ou atualizar o Unsloth:",
+        checkingInstall: "Verificando como o EquateX foi instalado...",
+        installIntro: "Para instalar ou atualizar o EquateX:",
         localUpdateHeading: "Atualização local",
         installCommandUnix: "Comando de instalação para macOS/Linux",
         installCommandWindows: "Comando de instalação para Windows",
@@ -628,11 +628,11 @@ export const ptBR = {
           "Instalação do pacote por código-fonte ou VCS detectada. Reinstale a partir do caminho local original ou URL do Git.",
         repoCheckoutFallback:
           "Se você ainda tiver o repositório baixado, execute o instalador local a partir dele:",
-        restartAfterUpdate: "Reinicie o Unsloth após a atualização.",
+        restartAfterUpdate: "Reinicie o EquateX após a atualização.",
         desktopManaged:
           "O aplicativo de desktop mantém seu backend integrado atualizado e avisará quando uma nova versão estiver disponível.",
         unknownInstall:
-          "Não foi possível detectar como o Unsloth foi instalado. Para instalações via instalador ou PyPI, use os comandos acima.",
+          "Não foi possível detectar como o EquateX foi instalado. Para instalações via instalador ou PyPI, use os comandos acima.",
         localCheckout:
           "Para instalações de repositório local, execute o instalador local a partir desse diretório:",
         docs: "Docs de instalação:",

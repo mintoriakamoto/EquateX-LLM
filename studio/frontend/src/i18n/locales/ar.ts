@@ -23,12 +23,12 @@ export const ar = {
   },
   shell: {
     beta: "BETA",
-    brand: "unsloth",
-    product: "Unsloth Studio",
+    brand: "equatex",
+    product: "EquateX Studio",
     accountMenu: "قائمة حساب {name}",
     updateAvailable: "يتوفر تحديث",
     aria: {
-      home: "الصفحة الرئيسية لـ Unsloth",
+      home: "الصفحة الرئيسية لـ EquateX",
       closeSidebar: "إغلاق الشريط الجانبي",
       openSidebar: "فتح الشريط الجانبي",
       chatOptions: "خيارات المحادثة",
@@ -89,7 +89,7 @@ export const ar = {
     title: "الإعدادات",
     dialog: {
       title: "الإعدادات",
-      description: "إدارة تفضيلات Unsloth الخاصة بك.",
+      description: "إدارة تفضيلات EquateX الخاصة بك.",
       closeAriaLabel: "إغلاق الإعدادات",
     },
     tabs: {
@@ -104,7 +104,7 @@ export const ar = {
     },
     general: {
       title: "عام",
-      description: "التفضيلات العامة لـ Unsloth.",
+      description: "التفضيلات العامة لـ EquateX.",
       account: "الحساب",
       huggingFaceToken: "توكن Hugging Face",
       huggingFaceTokenDescription:
@@ -113,7 +113,7 @@ export const ar = {
       showToken: "إظهار التوكن",
       tokenValidated: "تم التحقق من الرمز",
       password: "كلمة المرور",
-      passwordDescription: "تغيير كلمة المرور لحساب Unsloth هذا.",
+      passwordDescription: "تغيير كلمة المرور لحساب EquateX هذا.",
       passwordDialog: {
         trigger: "تغيير كلمة المرور",
         title: "تغيير كلمة المرور",
@@ -231,16 +231,16 @@ export const ar = {
         action: "إعادة تعيين التفضيلات",
         confirmTitle: "إعادة تعيين جميع التفضيلات المحلية؟",
         confirmDescription:
-          "يمسح التفضيلات المحلية فقط ويعيد تحميل Unsloth. تُحفظ المحادثات ووصول API والإعدادات المخزّنة في قاعدة البيانات.",
+          "يمسح التفضيلات المحلية فقط ويعيد تحميل EquateX. تُحفظ المحادثات ووصول API والإعدادات المخزّنة في قاعدة البيانات.",
         confirmAction: "إعادة التعيين وإعادة التحميل",
       },
     },
     profile: {
       title: "الملف الشخصي",
-      description: "كيفية ظهور ملفك الشخصي في Unsloth.",
+      description: "كيفية ظهور ملفك الشخصي في EquateX.",
       changePicture: "تغيير صورة الملف الشخصي",
       displayName: "الاسم المعروض",
-      nickname: "بماذا يجب أن يناديك Unsloth؟",
+      nickname: "بماذا يجب أن يناديك EquateX؟",
       nicknamePlaceholder: "اللقب",
       nicknameSaved: "تم حفظ الاسم المفضّل",
       avatarShape: "شكل صورة الملف الشخصي",
@@ -260,7 +260,7 @@ export const ar = {
     },
     appearance: {
       title: "المظهر",
-      description: "كيفية ظهور Unsloth Studio على هذا الجهاز.",
+      description: "كيفية ظهور EquateX Studio على هذا الجهاز.",
       theme: {
         title: "السمة",
         label: "نظام الألوان",
@@ -272,7 +272,7 @@ export const ar = {
       language: {
         title: "اللغة",
         label: "لغة العرض",
-        description: "اللغة التي يستخدمها Unsloth.",
+        description: "اللغة التي يستخدمها EquateX.",
         autoDetect: "اكتشاف تلقائي",
       },
       layout: {
@@ -284,7 +284,7 @@ export const ar = {
     },
     resources: {
       title: "النظام",
-      description: "مراقبة أجهزة خادم Unsloth هذا وتخزينه.",
+      description: "مراقبة أجهزة خادم EquateX هذا وتخزينه.",
       liveUpdates: "التحديثات المباشرة",
       floatingWindow: "نافذة عائمة",
       disableOverlay: "تعطيل التراكب",
@@ -412,7 +412,7 @@ export const ar = {
     },
     apiKeys: {
       title: "API",
-      description: "الوصول إلى Unsloth عبر API المتوافق مع OpenAI.",
+      description: "الوصول إلى EquateX عبر API المتوافق مع OpenAI.",
       readDocs: "قراءة وثائق API",
       noAccess: "لا يوجد وصول إلى API بعد.",
       accessTokens: "توكنات الوصول",
@@ -440,7 +440,7 @@ export const ar = {
       osWindows: "Windows",
       secureHttps: "HTTPS آمن",
       secureHttpsHint:
-        "لا يزال منفذ 0.0.0.0 قابلاً للوصول عالميًا. للحصول على أمان كامل، شغّل Unsloth Studio باستخدام --secure لعرض رابط HTTPS هذا فقط.",
+        "لا يزال منفذ 0.0.0.0 قابلاً للوصول عالميًا. للحصول على أمان كامل، شغّل EquateX Studio باستخدام --secure لعرض رابط HTTPS هذا فقط.",
       copyTunnelUrl: "نسخ رابط النفق",
       copySnippet: "نسخ المقتطف",
       copy: "نسخ",
@@ -476,7 +476,7 @@ export const ar = {
     about: {
       title: "حول",
       description: "الوثائق وملاحظات الإصدار والملاحظات ومعلومات البناء.",
-      studioVersion: "إصدار Unsloth",
+      studioVersion: "إصدار EquateX",
       packageVersion: "إصدار الحزمة",
       llamaCppVersion: "إصدار llama.cpp",
       hardware: "الأجهزة",
@@ -492,7 +492,7 @@ export const ar = {
       reportIssue: "الإبلاغ عن مشكلة",
       license: {
         sectionTitle: "الترخيص",
-        studioLabel: "Unsloth Studio",
+        studioLabel: "EquateX Studio",
         studioLicense: "AGPL-3.0",
         studioDescription: "مفتوح المصدر بموجب GNU AGPL v3.0.",
         libraryLabel: "Unsloth Core",
@@ -500,19 +500,19 @@ export const ar = {
         libraryDescription: "مرخّص بموجب Apache 2.0.",
       },
       dangerZone: "منطقة الخطر",
-      shutDownStudio: "إيقاف تشغيل Unsloth Studio",
+      shutDownStudio: "إيقاف تشغيل EquateX Studio",
       shutDownStudioDescription:
-        "يوقف خادم Unsloth وينهي جلستك.",
+        "يوقف خادم EquateX وينهي جلستك.",
       shutDown: "إيقاف التشغيل",
       update: {
-        title: "تحديث Unsloth Studio",
+        title: "تحديث EquateX Studio",
         commandText: "نص {label}",
         copied: "تم النسخ",
         copyCommand: "نسخ الأمر",
         commandCopied: "تم نسخ {label}",
         copyNamedCommand: "نسخ {label}",
-        checkingInstall: "جارٍ التحقق من طريقة تثبيت Unsloth...",
-        installIntro: "لتثبيت أو تحديث Unsloth:",
+        checkingInstall: "جارٍ التحقق من طريقة تثبيت EquateX...",
+        installIntro: "لتثبيت أو تحديث EquateX:",
         localUpdateHeading: "تحديث محلي",
         installCommandUnix: "أمر التثبيت لـ macOS/Linux",
         installCommandWindows: "أمر التثبيت لـ Windows",
@@ -526,11 +526,11 @@ export const ar = {
           "تم اكتشاف تثبيت من المصدر أو حزمة VCS. أعد التثبيت من المسار المحلي الأصلي أو رابط Git.",
         repoCheckoutFallback:
           "إذا كانت لا تزال لديك نسخة المستودع، شغّل المثبّت المحلي منها:",
-        restartAfterUpdate: "أعد تشغيل Unsloth بعد التحديث.",
+        restartAfterUpdate: "أعد تشغيل EquateX بعد التحديث.",
         desktopManaged:
           "يُبقي تطبيق سطح المكتب خادمه الخلفي المُضمَّن محدّثًا وسيُنبّهك عند توفر إصدار جديد.",
         unknownInstall:
-          "تعذّر اكتشاف طريقة تثبيت Unsloth. لعمليات تثبيت المثبّت أو PyPI، استخدم الأوامر أعلاه.",
+          "تعذّر اكتشاف طريقة تثبيت EquateX. لعمليات تثبيت المثبّت أو PyPI، استخدم الأوامر أعلاه.",
         localCheckout:
           "لعمليات تثبيت النسخة المحلية، شغّل المثبّت المحلي من تلك النسخة:",
         docs: "وثائق التثبيت:",
