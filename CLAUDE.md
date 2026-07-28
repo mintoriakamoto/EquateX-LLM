@@ -4,13 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository overview
 
-Unsloth: fast LLM fine-tuning/RL library plus a local web UI. Three main pieces:
+**EquateX** is the product brand for this project: a fast LLM fine-tuning/RL library plus a local web UI (**EquateX Studio**). It is built on — and is a rebranded fork of — [Unsloth](https://github.com/unslothai/unsloth); the internal Python package, imports, and `unsloth_zoo` dependency keep the `unsloth` name (renaming them is load-bearing), so "unsloth" in code/paths is expected and correct. Upstream Unsloth copyright, `LICENSE`/`COPYING`/SPDX headers are retained per Apache-2.0/AGPL-3.0; EquateX changes are copyright the EquateX team.
+
+Three main pieces:
 
 - `unsloth/` — the core Python library (Triton kernels, model patching, training/saving). Apache-2.0, except `unsloth/utils/` (LGPL) and `unsloth/kernels/moe/` (AGPL).
-- `studio/` — Unsloth Studio: FastAPI backend + React frontend + optional Tauri desktop app. AGPL-3.0.
-- `unsloth_cli/` — the `unsloth` Typer CLI (`unsloth studio`, `unsloth start <agent>`, `unsloth train`, ...). AGPL-3.0.
+- `studio/` — EquateX Studio: FastAPI backend + React frontend + optional Tauri desktop app. AGPL-3.0.
+- `unsloth_cli/` — the Typer CLI, invoked as `equatex` (brand) or `unsloth` (alias): `equatex studio`, `equatex start <agent>`, `equatex train`, ... AGPL-3.0.
 
-The single console entrypoint is `unsloth = "unsloth_cli:app"` (pyproject.toml). Root `unsloth-cli.py` is an unrelated legacy standalone fine-tuning example script. Version lives at `unsloth/models/_utils.py` (`__version__`).
+The console entrypoints are `equatex` and `unsloth`, both `= "unsloth_cli:app"` (pyproject.toml). Root `unsloth-cli.py` is an unrelated legacy standalone fine-tuning example script. Version lives at `unsloth/models/_utils.py` (`__version__`).
 
 ## Commands
 

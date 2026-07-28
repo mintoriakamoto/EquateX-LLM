@@ -33,6 +33,9 @@ dependencies = [
 ]
 
 [project.scripts]
+# EquateX is the product brand; `unsloth` stays as an alias so internal
+# `unsloth ...` wiring, installers, and existing docs keep working.
+equatex = "unsloth_cli:app"
 unsloth = "unsloth_cli:app"
 
 [tool.setuptools.dynamic]
@@ -1322,7 +1325,7 @@ rocm711-torch2100 = [
 [project.urls]
 homepage = "https://unsloth.ai"
 documentation = "https://unsloth.ai/docs"
-repository = "https://github.com/unslothai/unsloth"
+repository = "https://github.com/mintoriakamoto/EquateX-LLM"
 
 [tool.ruff]
 target-version = "py311"
